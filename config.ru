@@ -1,5 +1,5 @@
-require 'bundler'
-require 'rack/jekyll'
-Bundler.require(:default, :production)
+source "https://rubygems.org"
 
-run Rack::Jekyll.new
+gem 'rack-jekyll', :git => 'https://github.com/adaoraul/rack-jekyll.git', :require => 'rack/jekyll'
+gem 'RedCloth'
+gem 'newrelic_rpm'
