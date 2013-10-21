@@ -1,0 +1,16 @@
+name: CSSS
+author: Martin Gingras
+markdown: redcarpet
+url: csss.herokuapp.com
+port: 5050
+safe: true
+pygments: true
+future: false
+eclude:
+  -README.md
+  -Gemfile
+  -Gemfile.lock
+  -Procfile
+  -vendor
+  -gems
+  -Rakefile
