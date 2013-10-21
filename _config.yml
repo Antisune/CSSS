@@ -5,11 +5,12 @@ url: csss.herokuapp.com
 port: 5050
 safe: true
 pygments: true
+future: false
 exclude:
-  -README.md
-  -Gemfile
-  -Gemfile.lock
-  -Procfile
-  -vendor
-  -gems
-  -Rakefile
+- README.md
+- Gemfile
+- Gemfile.lock
+- Procfile
+- vendor
+- gems
+- Rakefile
