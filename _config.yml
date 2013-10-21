@@ -5,8 +5,7 @@ url: csss.herokuapp.com
 port: 5050
 safe: true
 pygments: true
-future: false
-eclude:
+exclude:
   -README.md
   -Gemfile
   -Gemfile.lock
