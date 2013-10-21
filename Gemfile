@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'rack-jekyll'
+gem 'rack-jekyll', :git => 'https://github.com/adaoraul/rack-jekyll.git', :require => 'rack/jekyll'
 gem 'RedCloth'
-gem 'thin'
 gem 'newrelic_rpm'
