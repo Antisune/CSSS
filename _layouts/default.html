@@ -4,14 +4,17 @@
   {% include head.html %}
 </head>
 <body id="default" onload="">
-  {% include navbar.html %}
-  <div class="container">
-    {{content}}
-    <!-- FOOTER -->
-    <footer>
-      <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2013 CSSS, Inc. &middot; <a href="http://mgingras.ca">Martin Gingras</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-  </div><!-- /.container -->
+  <div id="wrap">
+    {% include navbar.html %}
+    <div class="container main">
+      {{content}}
+      <!-- FOOTER -->
+    </div><!-- /.container -->
+  </div> <!-- /.wrap -->
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted credit">&copy; 2013 CSSS &middot; <a href="http://mgingras.ca">Martin Gingras</a></p>
+    </div>
+  </footer>
 </body>
 </html>
