@@ -15,21 +15,33 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Council</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Council<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-header">Event1 date</li>
-                <li><a href="#">Event1</a></li>
-                <li><a href="#">Event2</a></li>
-                <li><a href="#">Event3</a></li>
-                <li class="divider"></li>
-                <li><a href="#">See all events</a></li>
+                <li><a href="/council/councillors">Councillors</a></li>
+                <li><a href="/council/meetings">Meetings</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Important Documents</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                {% for event in site.categories.event %}
+                <li><a href="{event.url}">{{event.title}}</a></li>
+                {% endfor %}
+                <li class="dropdown-header">Science Cafés</li>
+                {% for cafe in site.categories.cafe %}
+                <li><a href="{{cafe.url}}">{{cafe.title}} - {{cafe.dade}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Important Documents<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Document</a></li>
+              </ul>
+            </li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 name: CSSS
 author: Martin Gingras
 markdown: redcarpet
+permalink: /:categories/:title
 url: csss.herokuapp.com
 port: 5050
 safe: true
