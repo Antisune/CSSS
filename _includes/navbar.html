@@ -31,8 +31,8 @@
                 <li><a href="{{event.url}}">{{event.title}}</a></li>
                 {% endfor %}
                 <li class="dropdown-header">Science Cafés</li>
-                {% for cafe in site.categories.cafe %}
-                <li><a href="{{cafe.url}}">{{cafe.title}} - {{cafe.edate}}</a></li>
+                {% for cafe in site.categories.cafe reversed %}
+                <li><a href="{{cafe.url}}">{{cafe.title}} - <small>{{cafe.edate}}</small></a></li>
                 {% endfor %}
               </ul>
             </li>

@@ -90,15 +90,15 @@ title: Home
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
-
+      {% assign first_post = site.posts.last %}
       <div id="events" class="row featurette">
         <div class="col-sm-7">
           <h2 class="featurette-heading" style="margin-top: 20px;">CSSS events. <span class="text-muted">We host tons of exciting events.</span></h2>
-          <p class="lead">Our next event we have planned is [...] Go to our events page to see more upcoming events.</p>
-          <p><a class="btn btn-default" href="#">See more events &raquo;</a></p>
+          <p class="lead">Our next event we have planned is {{first_post.title}} Go to our events page to see more upcoming events.</p>
+          <p><a class="btn btn-default" href="{{first_post.url}}">Go to event&raquo;</a></p>
         </div>
         <div class="col-sm-5">
-          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-rounded img-responsive" src="/img/event.jpg" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -150,7 +150,7 @@ title: Home
           </div> <!-- row -->
         </div>
         <div class="col-sm-4">
-          <img class="featurette-image img-responsive" src="/img/scienceFriends.png" alt="Science Friends">
+          <img class="featurette-image img-rounded img-responsive" src="/img/scienceFriends.png" alt="Science Friends">
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- ./container marketing -->
