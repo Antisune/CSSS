@@ -28,7 +28,7 @@
               <ul class="dropdown-menu">
                 <li class="dropdown-header">Regular Events</li>
                 {% for event in site.categories.event %}
-                <li><a href="{{event.url}}">{{event.title}}</a></li>
+                <li><a href="{{event.url}}">{{event.title}} - <small>{{event.edate}}</small></a></li>
                 {% endfor %}
                 <li class="dropdown-header">Science Cafés</li>
                 {% for cafe in site.categories.cafe reversed %}
