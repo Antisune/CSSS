@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: cafe
+categories: [cafe, event]
 title: Biophotonics
 caption: Shedding light on life
 img: biophotonics.jpg

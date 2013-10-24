@@ -6,14 +6,15 @@ title: Councillors
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 <!-- Two columns of text -->
-<h1>Executives</h1>
+<h1><strong><u>Executives</u>:</strong></h1>
+<br>
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     <img class="img-circle" src="/img/councillors/john.jpg" data-src="holder.js/140x140" alt="John Mesman">
     <h2>John Mesman <small>President</small></h2>
     <p>Is in charge of shit yo</p>
     <p>Contact: 
-      <a href="mailto:president@sciencesociey.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;&nbsp;
+      <a href="mailto:president@sciencesociey.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
       <a href=http://wwww.facebook.com/jnmesman><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
     </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
@@ -25,7 +26,7 @@ title: Councillors
       <li>Coordinates with Science Student Success CEnter (SSSC) and is responsible for all of our academic-related events and initiatives</li>
     </ul>
     <p>Contact: 
-      <a href="mailto:academic@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;&nbsp;
+      <a href="mailto:academic@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
       <a href=http://wwww.facebook.com/anna.samantha.7><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
     </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
@@ -40,30 +41,31 @@ title: Councillors
       <li>Available in the absence of the President</li>
     </ul>
     <p>Contact: 
-      <a href="mailto:internal@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;&nbsp;
+      <a href="mailto:internal@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
       <a href=http://wwww.facebook.com/owen.hovey><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
     </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     <img class="img-circle" src="/img/councillors/nour.jpg" data-src="holder.js/140x140" alt="Nour">
-    <h2>Nour Dabbour<small>VP Operations</small></h2>
+    <h2>Nour Dabbour <small>VP Operations</small></h2>
     <ul>
       <li>Plan and execute events</li>
       <li>Assist in managing Society finances</li>
     </ul>
     <p>Contact: 
-      <a href="mailto:operations@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;&nbsp;
+      <a href="mailto:operations@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
       <a href=http://wwww.facebook.com/nour.buzz><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
     </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 </div> <!-- ./row -->
-<h1>Councillors</h1>
+<h1><strong><u>Councillors</u>:</strong></h1>
+<br>
 <!-- Three columns of text -->
 <div class="row">
   {% for councillor in site.categories.councillor reversed %}
   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
     <img class="img-circle" src="/img/councillors/{{councillor.img}}" data-src="holder.js/140x140" alt="Generic placeholder image">
-    <h2>{{councillor.name}}<br><small>{{councillor.dept}}</small></h2>
+    <h3>{{councillor.name}}<br><small>{{councillor.dept}}</small></h3>
     <p>{{councillor.blurb}}</p>
     <p>Contact: 
       {% if councillor.email %}

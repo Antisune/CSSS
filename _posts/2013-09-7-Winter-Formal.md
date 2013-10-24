@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: event
+categories: [event, regular]
 title: Winter Formal
 caption: Come get your groove on
 img: winterDance.jpg

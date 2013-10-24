@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: cafe
+categories: [cafe, event]
 title: How to Stop a Runaway Train
 caption: Understanding spinal cord mechanisms of chronic pain
 img: spine.jpg
