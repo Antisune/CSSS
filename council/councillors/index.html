@@ -12,6 +12,10 @@ title: Councillors
     <img class="img-circle" src="/img/councillors/john.jpg" data-src="holder.js/140x140" alt="John Mesman">
     <h2>John Mesman <small>President</small></h2>
     <p>Is in charge of shit yo</p>
+    <p>Contact: 
+      <a href="mailto:president@sciencesociey.ca?Subject=CSSS" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;&nbsp;
+      <a href=http://wwww.facebook.com/martin.p.gingras><i class="icon-facebook icon-large"></i></a>&nbsp;
+    </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     <img class="img-circle" src="/img/councillors/anna.jpg" data-src="holder.js/140x140" alt="Anna Marello">
@@ -20,6 +24,9 @@ title: Councillors
       <li>Ensures attendance for departmental meetings and CASG meetings</li>
       <li>Coordinates with Science Student Success CEnter (SSSC) and is responsible for all of our academic-related events and initiatives</li>
     </ul>
+    <p>Contact: 
+      <a href="mailto:academic@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;&nbsp;
+    </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 </div> <!-- ./row -->
 <div class="row">
@@ -31,40 +38,55 @@ title: Councillors
       <li>Responsible for organizing Comedy Night</li>
       <li>Available in the absence of the President</li>
     </ul>
+    <p>Contact: 
+      <a href="mailto:internal@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;&nbsp;
+    </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
     <img class="img-circle" src="/img/councillors/nour.jpg" data-src="holder.js/140x140" alt="Nour">
-    <h2>Nour <small>VP Operations</small></h2>
+    <h2>Nour Dabbour<small>VP Operations</small></h2>
     <ul>
       <li>Plan and execute events</li>
       <li>Assist in managing Society finances</li>
     </ul>
+    <p>Contact: 
+      <a href="mailto:operations@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;&nbsp;
+    </p>
   </div><!-- /.col-lg-6 col-md-6 col-sm-6 col-xs-6 -->
 </div> <!-- ./row -->
 <h1>Councillors</h1>
 <!-- Three columns of text -->
 <div class="row">
+  {% for councillor in site.categories.councillor reversed %}
   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <img class="img-circle" src="/img/councillors/martin.jpg" data-src="holder.js/140x140" alt="Generic placeholder image">
-    <h2>Martin Gingras<br><small>Computer Science</small></h2>
-    <p>I am a third year student here at Carleton and currently the CS rep on CUSA, CASG, and CSSS. I have industry experience working at IBM and BlackBerry, and tons of person software development experience. Hit me up if you wanna chat.</p>
-    <a href="mailto:martin.p.gingras@gmail.com?Subject=CSSS%20Representative" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;
-    <a href=http://wwww.facebook.com/martin.p.gingras><i class="icon-facebook icon-large"></i></a>&nbsp;
-    <a href=https://twitter.com/martin_gingras><i class="icon-twitter icon-large"></i></a>&nbsp;
-    <a href=http://github.com/mgingras><i class="icon-github icon-large"></i></a>&nbsp;
-    <a href=http://mgingras.ca><i class="icon-code icon-large"></i></a>
+    <img class="img-circle" src="/img/councillors/{{councillor.img}}" data-src="holder.js/140x140" alt="Generic placeholder image">
+    <h2>{{councillor.name}}<br><small>{{councillor.dept}}</small></h2>
+    <p>{{councillor.blurb}}</p>
+    <p>Contact: 
+      {% if councillor.email %}
+      <a href="mailto:{{councillor.email}}?Subject=CSSS%20Representative" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;
+      {% endif %}
+      {% if councillor.facebook %}
+      <a href=http://wwww.facebook.com/{{councillor.facebook}}><i class="icon-facebook icon-large"></i></a>&nbsp;
+      {%endif%}
+      {% if councillor.twitter %}
+      <a href=https://twitter.com/{{councillor.twitter}}><i class="icon-twitter icon-large"></i></a>&nbsp;
+      {%endif%}
+      {% if councillor.github %}
+      <a href=http://github.com/{{councillor.github}}><i class="icon-github icon-large"></i></a>&nbsp;
+      {%endif%}
+      {% if councillor.website %}
+      <a href=http://{{councillor.website}}><i class="icon-code icon-large"></i></a>
+      {%endif%}
+    </p>
   </div><!-- /.col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <img class="img-circle" src="/img/councillors/maddie.jpg" data-src="holder.js/140x140" alt="Generic placeholder image">
-    <h2>Maddie Adams<br><small>Food Science</small></h2>
-    <p>I am a third year Food Science and Nutrition Student with a Business Minor. I am the Science Faculty rep for CUSA, CASG, and chemistry rep for CSSS. I love to volunteer and be involved on campus. I am originally from Kamloops, BC. If you have any questions or just want to chat, feel free to contact me.</p>
-    <a href="mailto:madisonjeadams@gmail.com?Subject=CSSS%20Representative" title="Email Me!"><i class="icon-envelope icon-large"></i></a>&nbsp;&nbsp;
-    <a href=https://www.facebook.com/mjeadams><i class="icon-facebook icon-large"></i></a>
-  </div><!-- /.col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-    <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-  </div><!-- /.col-lg-4 col-md-4 col-sm-4 col-xs-4 -->
-</div> <!-- /.row --> 
+  {% if  site.threeArray contains forloop.index %}
+</div> <!-- ./row -->
+<div class="row">
+  {%endif%}
+  {% assign councillors = forloop.length %}
+  {%endfor%}
+  {% if site.threeArray contains councillors %}
+  {% else% %}
+</div> <!-- ./row -->
+{% endif %}
