@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.sciencesociety.ca/</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/about</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/council/councillors</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/council/meetings</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/event/regular/Winter-Formal</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/cafe/event/Air-Pollution</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/cafe/Greenhouse-Planet</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/cafe/event/Biophotonics</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.sciencesociety.ca/cafe/event/Stop-A-Train</loc>
+  <lastmod>2013-10-26T05:40:09+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>
