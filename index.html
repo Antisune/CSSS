@@ -2,16 +2,6 @@
 layout: default
 title: Home
 ---  
-<!-- FACEBOOK SHIT -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- END OF FACEBOOK SHIT -->
 <!-- Next event -->
 {% assign next_event = site.categories.event.last %}
 <!-- Carousel
@@ -22,6 +12,7 @@ title: Home
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="item active">
@@ -30,6 +21,15 @@ title: Home
               <img class="img-responsive" style="height:40%;width:40%;" src="/img/csss-logo-square.png" alt="CSSS">
               <h1>Carleton Science Student Society</h1>
               <p>Welcome to the Carleton Science Student Society Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/img/winterFormal.png">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><a class="btn btn-large btn-primary" href="/event/regular/Winter-Formal/">Find out more!</a></p>
+              <p><a class="btn btn-large btn-success" href="mailto:internal@sciencesociety.ca?Subject=Winter%20Formal%20Tickets!!!">Get tickets!</a></p>
             </div>
           </div>
         </div>
@@ -57,7 +57,15 @@ title: Home
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: 3000
+        });
 
+        $('.carousel').carousel('cycle');
+    });
+    </script>
 
 
     <!-- Marketing messaging and featurettes
@@ -156,4 +164,14 @@ title: Home
       </div> <!-- row -->
     </div> <!-- ./container marketing -->
     <hr>
-      <!-- /END THE FEATURETTES -->
+      <!-- /END THE FEATURETTES -->  
+    <!-- FACEBOOK SHIT -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- END OF FACEBOOK SHIT -->
