@@ -12,6 +12,4 @@ edate: Saturday, January 18, 2014
 ###**Price:**
 ####Delicious Dinner & Dance: **$50**
 ####Dance: **$18**
-<h4><strong>Canadian Museum of Nature</strong><br>240 McLeod St.<br />Ottawa, ON</h4>
-<h4><a href="http://goo.gl/maps/inAzH" target="_blank">View Map</a></h4>
-<p>For more information or if you're interested in getting involved: &nbsp;<a href="mailto:president@sciencesociety.ca">president@sciencesociety.ca</a></p>
+Thank you to everyone who attended this year's Science Winter Formal! Photos are available online on the Carleton Science Student Society Facebook Page. Anyone with suggestions or comments regarding formal should direct an email to <a href="mailto:executives@sciencesociety.ca">executives@sciencesociety.ca</a>!
