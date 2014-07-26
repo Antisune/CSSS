@@ -2,96 +2,174 @@
 layout: default
 title: Councillors
 ---
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-<!-- Two columns of text -->
-<h1><strong><u>Executives</u>:</strong></h1>
-<br>
-<div class="row">
-  <div class="col-sm-6">
-    <img class="img-circle" src="/img/councillors/john.jpg" data-src="holder.js/140x140" alt="John Mesman">
-    <h2>John Mesman <small>President</small></h2>
-    <p>Is in charge of shit yo</p>
-    <p>Contact:
-      <a href="mailto:president@sciencesociey.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-      <a href=http://wwww.facebook.com/jnmesman><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
-    </p>
-  </div><!-- /.col-sm-6 -->
-  <div class="col-sm-6">
-    <img class="img-circle img-responsive" src="/img/councillors/anna.jpg" data-src="holder.js/140x140" alt="Anna Marello">
-    <h2>Anna Marrello <small>VP Academic</small></h2>
-    <ul>
-      <li>Ensures attendance for departmental meetings and CASG meetings</li>
-      <li>Coordinates with Science Student Success CEnter (SSSC) and is responsible for all of our academic-related events and initiatives</li>
-    </ul>
-    <p>Contact:
-      <a href="mailto:academic@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-      <a href=http://wwww.facebook.com/anna.samantha.7><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
-    </p>
-  </div><!-- /.col-sm-6 -->
-</div> <!-- ./row -->
-<div class="row">
-  <div class="col-sm-6">
-    <img class="img-circle img-responsive" src="/img/councillors/owen.jpg" data-src="holder.js/140x140" alt="Owen Hovey">
-    <h2>Owen Hovey <small>VP Internal</small></h2>
-    <ul>
-      <li>Ensures regular Council meetings and oversees documents and bylaws</li>
-      <li>Responsible for organizing Comedy Night</li>
-      <li>Available in the absence of the President</li>
-    </ul>
-    <p>Contact:
-      <a href="mailto:internal@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-      <a href=http://wwww.facebook.com/owen.hovey><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
-    </p>
-  </div><!-- /.col-sm-6 -->
-  <div class="col-sm-6">
-    <img class="img-circle img-responsive" src="/img/councillors/nour.jpg" data-src="holder.js/140x140" alt="Nour">
-    <h2>Nour Dabbour <small>VP Operations</small></h2>
-    <ul>
-      <li>Plan and execute events</li>
-      <li>Assist in managing Society finances</li>
-    </ul>
-    <p>Contact:
-      <a href="mailto:operations@sciencesociety.ca?Subject=CSSS" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-      <a href=http://wwww.facebook.com/nour.buzz><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
-    </p>
-  </div><!-- /.col-sm-6 -->
-</div> <!-- ./row -->
-<h1><strong><u>Councillors</u>:</strong></h1>
-<br>
-<!-- Three columns of text -->
-<div class="row">
-  {% for councillor in site.categories.councillor reversed %}
-  <div class="col-sm-4">
-    <img class="img-circle img-responsive" src="/img/councillors/{{councillor.img}}" data-src="holder.js/140x140" alt="Generic placeholder image">
-    <h3>{{councillor.name}}<br><small>{{councillor.dept}}</small></h3>
-    <p>{{councillor.blurb}}</p>
-    <p>Contact:
-      {% if councillor.email %}
-      <a href="mailto:{{councillor.email}}?Subject=CSSS%20Representative" title="Email Me!"><i class="fa fa-envelope fa-lg"></i></a>&nbsp;
-      {% endif %}
-      {% if councillor.facebook %}
-      <a href=http://wwww.facebook.com/{{councillor.facebook}}><i class="fa fa-facebook-square fa-lg"></i></a>&nbsp;
-      {%endif%}
-      {% if councillor.twitter %}
-      <a href=https://twitter.com/{{councillor.twitter}}><i class="fa fa-twitter fa-lg"></i></a>&nbsp;
-      {%endif%}
-      {% if councillor.github %}
-      <a href=http://github.com/{{councillor.github}}><i class="fa fa-github fa-lg"></i></a>&nbsp;
-      {%endif%}
-      {% if councillor.website %}
-      <a href=http://{{councillor.website}}><i class="fa fa-code fa-lg"></i></a>
-      {%endif%}
-    </p>
-  </div><!-- /.col-sm-4 -->
-  {% if  site.threeArray contains forloop.index %}
-</div> <!-- ./row -->
-<div class="row">
-  {%endif%}
-  {% assign councillors = forloop.length %}
-  {%endfor%}
-  {% if site.threeArray contains councillors %}
-  {% else% %}
-</div> <!-- ./row -->
-{% endif %}
+    <div class="top-title-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="page-info">
+                        <h1 class="h1-page-title">Our Team</h1>
+
+                        <h2 class="h2-page-desc">
+                            This is our talented team
+                        </h2>
+
+                        <!-- BreadCrumb -->
+                        <div class="breadcrumb-container">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="active">Team</li>
+                            </ol>
+                        </div>
+                        <!-- BreadCrumb -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--.top wrapper end -->
+<div class="loading-container">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>
+<div class="content-wrapper hide-until-loading">
+  <div class="body-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 animated" data-animtype="flipInY"
+             data-animrepeat="0"
+             data-speed="1s"
+             data-delay="0.5s">
+            <h2 class="h2-section-title">Our Executives</h2>
+
+            <div class="i-section-title">
+                <i class="icon-users-outline">
+
+                </i>
+            </div>
+
+              <div class="space-sep20"></div>
+          </div>
+        </div>
+        <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0"
+             data-animdelay="0.4s">
+              {% for exec in site.categories.executives reversed %}
+               <div class="col-md-4 col-sm-4">
+                   <div class="team-member">
+                       <div class="team-member-image img-overlay">
+                           <img src="/img/councillors/{{exec.img}}" alt="{{exec.name}}"/>
+
+                           <div class="item-img-overlay">
+                               <div class="social-icons item_img_overlay_content">
+                               {% if exec.email %}
+                                <a href="#" title="email" target="_blank" class="social-media-icon mail-icon">Email</a>
+                               {% endif %}
+                               {% if exec.facebook %}
+                                <a href="#" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
+                               {%endif%}
+                               {% if exec.twitter %}
+                                <a href="#" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
+                               {%endif%}
+                               {% if exec.linkedin %}
+                                <a href="#" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
+                               {%endif%}
+                                </div>
+                           </div>
+                       </div>
+                       <div class="team-member-content">
+                           <h3 class="team-member-name h3-body-title">
+                               {{exec.name}}
+                           </h3>
+
+                           <div class="team-member-position">
+                               {{exec.role}}
+                           </div>
+                           <div class="team-member-short-bio">
+                               {{exec.blurb}}
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               {% if  site.threeArray contains forloop.index %}
+               </div> <!-- ./row -->
+                <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
+               {%endif%}
+               {% assign execs = forloop.length %}
+               {%endfor%}
+               {% if site.threeArray contains execs %}
+               {% else% %}
+             </div> <!-- ./row -->
+             {% endif %}
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12 animated" data-animtype="flipInY"
+               data-animrepeat="0"
+               data-speed="1s"
+               data-delay="0.5s">
+              <h2 class="h2-section-title">Our Councillors</h2>
+
+              <div class="i-section-title">
+                  <i class="icon-users-outline">
+
+                  </i>
+              </div>
+
+                <div class="space-sep20"></div>
+            </div>
+          </div>
+          <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0"
+               data-animdelay="0.4s">
+              {% for councillor in site.categories.councillor reversed %}
+               <div class="col-md-3 col-sm-3">
+                   <div class="team-member">
+                       <div class="team-member-image img-overlay">
+                           <img src="/img/councillors/{{councillor.img}}" alt="{{councillor.name}}"/>
+
+                           <div class="item-img-overlay">
+                               <div class="social-icons item_img_overlay_content">
+                               {% if councillor.email %}
+                                <a href="#" title="email" target="_blank" class="social-media-icon mail-icon">Email</a>
+                               {% endif %}
+                               {% if councillor.facebook %}
+                                <a href="#" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
+                               {%endif%}
+                               {% if councillor.twitter %}
+                                <a href="#" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
+                               {%endif%}
+                               {% if councillor.linkedin %}
+                                <a href="#" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
+                               {%endif%}
+                                </div>
+                           </div>
+                       </div>
+                       <div class="team-member-content">
+                           <h3 class="team-member-name h3-body-title">
+                               {{councillor.name}}
+                           </h3>
+
+                           <div class="team-member-position">
+                               {{councillor.dept}}
+                           </div>
+                           <div class="team-member-short-bio">
+                               {{councillor.blurb}}
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               {% if  site.fourArray contains forloop.index %}
+               </div> <!-- ./row -->
+                <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
+               {%endif%}
+               {% assign councillors = forloop.length %}
+               {%endfor%}
+               {% if site.fourArray contains councillors %}
+               {% else% %}
+             </div> <!-- ./row -->
+             {% endif %}
+      </div>
+    </div> <!-- Container -->
+  </div> <!-- body-wrapper -->
+</div> <!-- content-wrapper -->
