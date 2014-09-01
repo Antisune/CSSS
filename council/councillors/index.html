@@ -65,16 +65,16 @@ title: Councillors
                            <div class="item-img-overlay">
                                <div class="social-icons item_img_overlay_content">
                                {% if exec.email %}
-                                <a href="#" title="email" target="_blank" class="social-media-icon mail-icon">Email</a>
+                                <a href="mailto:{{exec.email}}" title="email" class="social-media-icon mail-icon">Email</a>
                                {% endif %}
                                {% if exec.facebook %}
-                                <a href="#" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
+                                <a href="http://facebook.com/{{exec.facebook}}" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
                                {%endif%}
                                {% if exec.twitter %}
-                                <a href="#" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
+                                <a href="http://twitter.com/{{exec.twitter}}" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
                                {%endif%}
                                {% if exec.linkedin %}
-                                <a href="#" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
+                                <a href="https://www.linkedin.com/in/{{exec.linkedin}}" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
                                {%endif%}
                                 </div>
                            </div>
@@ -103,7 +103,6 @@ title: Councillors
                {% else% %}
              </div> <!-- ./row -->
              {% endif %}
-        </div> <!-- row -->
         <div class="row">
           <div class="col-md-12 col-sm-12 animated" data-animtype="flipInY"
                data-animrepeat="0"
@@ -131,16 +130,16 @@ title: Councillors
                            <div class="item-img-overlay">
                                <div class="social-icons item_img_overlay_content">
                                {% if councillor.email %}
-                                <a href="#" title="email" target="_blank" class="social-media-icon mail-icon">Email</a>
+                                <a href="mailto:{{councillor.email}}" title="email" class="social-media-icon mail-icon">Email</a>
                                {% endif %}
                                {% if councillor.facebook %}
-                                <a href="#" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
+                                <a href="http://facebook.com/{{councillor.facebook}}" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
                                {%endif%}
                                {% if councillor.twitter %}
-                                <a href="#" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
+                                <a href="http://twitter.com/{{councillor.twitter}}" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
                                {%endif%}
                                {% if councillor.linkedin %}
-                                <a href="#" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
+                                <a href="https://www.linkedin.com/in/{{councillor.linkedin}}" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
                                {%endif%}
                                 </div>
                            </div>
@@ -169,6 +168,71 @@ title: Councillors
                {% else% %}
              </div> <!-- ./row -->
              {% endif %}
+             <div class="row">
+               <div class="col-md-12 col-sm-12 animated" data-animtype="flipInY"
+                    data-animrepeat="0"
+                    data-speed="1s"
+                    data-delay="0.5s">
+                   <h2 class="h2-section-title">Our Directors</h2>
+
+                   <div class="i-section-title">
+                       <i class="icon-users-outline">
+
+                       </i>
+                   </div>
+
+                     <div class="space-sep20"></div>
+                 </div>
+               </div>
+               <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0"
+                    data-animdelay="0.4s">
+                   {% for director in site.categories.director reversed %}
+                    <div class="col-md-3 col-sm-3">
+                        <div class="team-member">
+                            <div class="team-member-image img-overlay">
+                                <img src="/img/councillors/{{director.img}}" alt="{{director.name}}"/>
+
+                                <div class="item-img-overlay">
+                                    <div class="social-icons item_img_overlay_content">
+                                    {% if director.email %}
+                                     <a href="mailto:{{exec.email}}" title="email" class="social-media-icon mail-icon">Email</a>
+                                    {% endif %}
+                                    {% if director.facebook %}
+                                     <a href="http://facebook.com/{{director.facebook}}" title="facebook" target="_blank" class="social-media-icon facebook-icon">Facebook</a>
+                                    {%endif%}
+                                    {% if director.twitter %}
+                                     <a href="http://twitter.com/{{director.twitter}}" title="twitter" target="_blank" class="social-media-icon twitter-icon">Twitter</a>
+                                    {%endif%}
+                                    {% if director.linkedin %}
+                                     <a href="https://www.linkedin.com/in/{{director.linkedin}}" title="linkedin" target="_blank" class="social-media-icon linkedin-icon">Linkedin</a>
+                                    {%endif%}
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="team-member-content">
+                                <h3 class="team-member-name h3-body-title">
+                                    {{director.name}}
+                                </h3>
+
+                                <div class="team-member-position">
+                                    {{director.dept}}
+                                </div>
+                                <div class="team-member-short-bio">
+                                    {{director.blurb}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if  site.fourArray contains forloop.index %}
+                    </div> <!-- ./row -->
+                     <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
+                    {%endif%}
+                    {% assign directors = forloop.length %}
+                    {%endfor%}
+                    {% if site.fourArray contains directors %}
+                    {% else% %}
+                  </div> <!-- ./row -->
+                  {% endif %}
       </div>
     </div> <!-- Container -->
   </div> <!-- body-wrapper -->

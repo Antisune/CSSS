@@ -1,9 +1,9 @@
 ---
-name: Dan Motazedian
-email: danmotazedian@cmail.carleton.ca
+name: Vacant
+<!-- email: danmotazedian@cmail.carleton.ca -->
 categories: councillor
 dept: Integrated Science
-img: dan.jpg
-facebook: dan.motazedian
+img: vacant.jpg
+<!-- facebook: dan.motazedian -->
 <!-- blurb: -->
 ---
