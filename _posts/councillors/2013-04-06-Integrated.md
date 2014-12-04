@@ -1,6 +1,6 @@
 ---
 name: Chelsea Black
-<!-- email: danmotazedian@cmail.carleton.ca -->
+email: chelsea.black@carleton.ca
 categories: councillor
 dept: Integrated Science
 img: chelsea.jpg
