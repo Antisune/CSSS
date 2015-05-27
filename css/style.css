@@ -3689,6 +3689,15 @@ Sticky Menu
     font-size: 11px;
 }
 
+.mail-us span a {
+    color: #969696;
+    text-decoration: none;
+}
+
+.mail-us span a:hover {
+    color: #d14836;
+}
+
 .top-bar-block:last-child {
     border-right: 0;
 }
