@@ -168,6 +168,8 @@ title: Councillors
                {% else% %}
              </div> <!-- ./row -->
              {% endif %}
+
+             <!--
              <div class="row">
                <div class="col-md-12 col-sm-12 animated" data-animtype="flipInY"
                     data-animrepeat="0"
@@ -224,14 +226,14 @@ title: Councillors
                         </div>
                     </div>
                     {% if  site.fourArray contains forloop.index %}
-                    </div> <!-- ./row -->
+                    </div>
                      <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
                     {%endif%}
                     {% assign directors = forloop.length %}
                     {%endfor%}
                     {% if site.fourArray contains directors %}
                     {% else% %}
-                  </div> <!-- ./row -->
+                  </div> -->
                   {% endif %}
       </div>
     </div> <!-- Container -->
