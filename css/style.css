@@ -3605,7 +3605,11 @@ Navigation
 }
 
 .navigation ul li a.activelink {
+/*
+    Ignoring this rule for issue #36
+
     font-weight: bold;
+*/
 }
 
 .navigation ul li:first-child > a {
