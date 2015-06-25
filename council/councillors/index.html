@@ -54,10 +54,10 @@ title: Councillors
               <div class="space-sep20"></div>
           </div>
         </div>
-        <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0"
+        <div class="row animated row-centered" data-animtype="fadeInUp" data-animrepeat="0"
              data-animdelay="0.4s">
               {% for exec in site.categories.executives reversed %}
-               <div class="col-md-4 col-sm-4">
+               <div class="col-md-4 col-sm-4 col-centered">
                    <div class="team-member">
                        <div class="team-member-image img-overlay">
                            <img src="/img/councillors/{{exec.img}}" alt="{{exec.name}}"/>
@@ -95,7 +95,7 @@ title: Councillors
                </div>
                {% if  site.threeArray contains forloop.index %}
                </div> <!-- ./row -->
-                <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
+                <div class="row animated row-centered" data-animtype="fadeInUp" data-animrepeat="0">
                {%endif%}
                {% assign execs = forloop.length %}
                {%endfor%}
@@ -119,10 +119,10 @@ title: Councillors
                 <div class="space-sep20"></div>
             </div>
           </div>
-          <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0"
+          <div class="row animated row-centered" data-animtype="fadeInUp" data-animrepeat="0"
                data-animdelay="0.4s">
               {% for councillor in site.categories.councillor reversed %}
-               <div class="col-md-3 col-sm-3">
+               <div class="col-md-3 col-sm-3 col-centered">
                    <div class="team-member">
                        <div class="team-member-image img-overlay">
                            <img src="/img/councillors/{{councillor.img}}" alt="{{councillor.name}}"/>
@@ -160,7 +160,7 @@ title: Councillors
                </div>
                {% if  site.fourArray contains forloop.index %}
                </div> <!-- ./row -->
-                <div class="row animated" data-animtype="fadeInUp" data-animrepeat="0">
+                <div class="row animated row-centered" data-animtype="fadeInUp" data-animrepeat="0">
                {%endif%}
                {% assign councillors = forloop.length %}
                {%endfor%}
