@@ -667,6 +667,19 @@ textarea .section-content.section-image {
     float: left;
 }
 
+/* Centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* Reset the text-align */
+    text-align:left;
+    /* Inline-block space fix */
+    margin-right:-4px;
+}
+
 /* Colors Text */
 body .white-text, html .white-text,
 button .white-text,
