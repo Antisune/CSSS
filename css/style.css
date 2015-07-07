@@ -678,6 +678,7 @@ textarea .section-content.section-image {
   text-align:left;
   /* Inline-block space fix */
   margin-right:-4px;
+  vertical-align: text-top;
 }
 
 /* Colors Text */
@@ -6237,11 +6238,21 @@ Team member
 
 .team-member .team-member-image {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+}
+
+.team-member .team-member-image:before {
+  content: "";
+  display: block;
+  padding-top: 100%; 	/* initial ratio of 1:1*/
 }
 
 .team-member .team-member-image > img {
-  width: 100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
 }
 
 .team-member .team-member-content {
