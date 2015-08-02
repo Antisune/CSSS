@@ -1,6 +1,8 @@
 @media (max-width: 767px)
 {
-
+    .col-centered {
+      width: 85%;
+    }
 
     .container {
         padding-right: 20px;
