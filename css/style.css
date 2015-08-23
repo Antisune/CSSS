@@ -3079,6 +3079,10 @@ Footer
   text-decoration: none;
 }
 
+.footer .footer-col .footer-content a:hover {
+  color: #fff;
+}
+
 .footer .footer-col .footer-content .footer-recent-tweets {
   list-style-type: none;
   padding-left: 25px;
