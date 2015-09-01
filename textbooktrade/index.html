@@ -91,46 +91,209 @@ title: Textbook Trade
     }
     </style>
 
+    <div class="row">
+      <p>
+        Textbook Trade is a new and free service run out of the Carleton Science
+        Student Society office. This service is available throughout the year
+        and allows science students to sell and/or buy their used textbooks in
+        an effective and dependable manner. The CSSS will document all
+        textbooks and prices, and once a textbook has been purchased the buyer
+        will be notified and we will return 100% of the money. For more
+        information about this service please contact your VP Programming,
+        <a href="mailto:programming@sciencesociety.ca">Alicia Duval</a>.
+      </p>
+    </div>
+
     <ul class="textbook-entry-list">
-      <li class="textbook-entry">
-        <div class="row">
-          <div class="col-md-2">
-            <img src="https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Help_book_support_question_mark.png">
-          </div>
-          <div class="col-md-5">
-            <ul>
-              <li><span>Title:</span>Your Textbook</li>
-              <li><span>Description:</span>This could be your textbook, listed for sale on this page where you get 100% of the asking price!</li>
-              <li><span>Edition:</span>1st</li>
-              <li><span>Course:</span>ABCD1234</li>
-            </ul>
-          </div>
-          <div class="col-md-5">
-            <ul>
-              <li><span>Availability:</span>1</li>
-              <li><span>Condition:</span>New</li>
-              <li><span>Price:</span>$???.??</li>
-            </ul>
-          </div>
-        </div>
-      </li>
     </ul>
 
-    <div class="row">
-        <div class="col-md-12">
-          If you're in need of a textbook, why don't you try these free sources as an alternative:
-          <ul>
-            <li><a href="https://openstaxcollege.org/books">Openstax College</a></li>
-            <li><a href="http://gen.lib.rus.ec">Library Genesis</a></li>
-            <li><a href="http://en.bookfi.org">Bookfi</a></li>
-            <li><a href="http://www.gutenberg.org">Project Gutenberg</a></li>
-            <li><a href="http://ebookee.org">Ebookee</a></li>
-            <li><a href="http://manybooks.net">ManyBooks</a></li>
-            <li><a href="http://2020ok.com">2020ok</a></li>
-            <li><a href="http://www.freebookspot.es/Default.aspx">FreeBookSpot</a></li>
-          </ul>
-        </div>
+    <script>
+
+    // I just figured I'd plop a script here to generate the HTML for the
+    // textbooks dynamically so all that anyone else has to do is just modify
+    // a JSON list here. Should still work wonders on mobile devices
+    var textbooks = [
+      {
+        title: "Fundamentals of Biochemistry (Hard Cover)",
+        author: "Voet & Pratt",
+        edition: "Fourth",
+        course: "",
+        condition: "Used",
+        cover: "http://ecx.images-amazon.com/images/I/51Df4J1WvhL._SX258_BO1,204,203,200_.jpg",
+        price: 15
+      },
+      {
+        title: "Inorganic Chemistry (Paperback)",
+        author: "Housecroft",
+        edition: "Third",
+        course: "",
+        cover: "http://www-fp.pearsonhighered.com/assets/hip/images/bigcovers/0131755536.jpg",
+        condition: "Slightly Used",
+        price: 80
+      },
+      {
+        title: "Introduction to Genetic Analysis (Loose Leaf)",
+        author: "Griffiths",
+        edition: "Ninth",
+        course: "",
+        cover: "http://ecx.images-amazon.com/images/I/51Qh5-h64SL.jpg",
+        condition: "Used",
+        price: 15
+      },
+      {
+        title: "Introduction to Spectroscopy",
+        author: "Pavia",
+        edition: "Fourth",
+        condition: "Used",
+        cover: "http://ecx.images-amazon.com/images/I/41C3VGm-pjL._SX258_BO1,204,203,200_.jpg",
+        price: 50
+      },
+      {
+        title: "Introduction to Spectroscopy",
+        author: "Pavia",
+        edition: "Fourth",
+        condition: "Good",
+        cover: "http://ecx.images-amazon.com/images/I/41C3VGm-pjL._SX258_BO1,204,203,200_.jpg",
+        price: 80
+      },
+      {
+        title: "Organic Chemistry (Paperback)",
+        author: "Clayden",
+        edition: "Second",
+        cover: "http://ecx.images-amazon.com/images/I/81WBZFUfGgL.jpg",
+        condition: "Slightly Used",
+        price: 50
+      },
+      {
+        title: "Plant Physiology (Hard Cover)",
+        author: "Taiz & Zeiger",
+        edition: "Fifth",
+        cover: "http://ecx.images-amazon.com/images/I/61PZ85H50OL._SY344_BO1,204,203,200_.jpg",
+        condition: "Good",
+        price: 20
+      },
+      {
+        title: "Plant Physiology (Loose Leaf)",
+        author: "Taiz & Zeiger",
+        edition: "Fifth",
+        condition: "Used",
+        cover: "http://ecx.images-amazon.com/images/I/61PZ85H50OL._SY344_BO1,204,203,200_.jpg",
+        price: 10
+      },
+      {
+        title: "Principles of Biochemistry (Hard Cover)",
+        author: "Horton et al.",
+        edition: "Fourth",
+        condition: "Good",
+        course: "BIOC/L 2200",
+        cover: "http://www-fp.pearsonhighered.com/assets/hip/images/bigcovers/0131453068.jpg",
+        price: 10
+      },
+      {
+        title: "Quantitative Chemical Analysis (Hard Cover)",
+        author: "Daniel C. Harris",
+        edition: "Eighth",
+        cover: "http://jacketupload.macmillanusa.com/jackets/high_res/jpgs/9781429218153.jpg",
+        condition: "Good",
+        price: 90
+      }
+    ]
+
+    // World's smallest DOMReady script, courtesy of Dustin Diaz
+    function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+    r(function() {
+
+      // Get a handle on the list tag
+      var list = $("ul.textbook-entry-list");
+
+      // Loop through the textbooks
+      for(var i=0;i<textbooks.length;++i) {
+
+        textbook = textbooks[i];
+
+        // For every textbook, make a list item element
+        var textbookListElement = $("<li></li>")
+        textbookListElement.addClass("textbook-entry");
+
+        var rowDiv = $("<div></div>");
+        rowDiv.addClass("row");
+
+        var imageColumn = $("<div></div>");
+        imageColumn.addClass("col-md-2");
+
+        var image = $("<img>");
+        image.attr("src", textbook.cover || "https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Help_book_support_question_mark.png");
+
+        var deetsColumn1 = $("<div></div>");
+        deetsColumn1.addClass("col-md-5");
+
+        var ul1 = $("<ul></ul>");
+
+        var title = $("<li></li>");
+        title.append("<span>Title:</span>");
+        title.append(textbook.title);
+
+        var author = $("<li></li>");
+        author.append("<span>Author:</span>");
+        author.append(textbook.author);
+
+        var edition = $("<li></li>");
+        edition.append("<span>Edition:</span>");
+        edition.append(textbook.edition);
+
+        var course = $("<li></li>");
+        course.append("<span>Course:</span>");
+        course.append(textbook.course || "");
+
+        var deetsColumn2 = $("<div></div>");
+        deetsColumn2.addClass("col-md-5");
+
+        var ul2 = $("<ul></ul>");
+
+        var condition = $("<li></li>");
+        condition.append("<span>Condition:</span>");
+        condition.append(textbook.condition);
+
+        var price = $("<li></li>");
+        price.append("<span>Price:</span>$");
+        price.append(Math.round(textbook.price * 100) / 100);
+
+        // Put everything together
+        imageColumn.append(image);
+        rowDiv.append(imageColumn);
+        ul1.append(title);
+        ul1.append(author);
+        ul1.append(edition);
+        if(textbook.course) { ul1.append(course); }
+        deetsColumn1.append(ul1);
+        rowDiv.append(deetsColumn1);
+        ul2.append(condition);
+        ul2.append(price);
+        deetsColumn2.append(ul2);
+        rowDiv.append(deetsColumn2);
+        textbookListElement.append(rowDiv);
+        list.append(textbookListElement);
+      }
+
+    })
+
+    </script>
+
+  <div class="row">
+    <div class="col-md-12">
+      If you're in need of a textbook, why don't you try these free sources as an alternative:
+      <ul>
+        <li><a href="https://openstaxcollege.org/books">Openstax College</a></li>
+        <li><a href="http://gen.lib.rus.ec">Library Genesis</a></li>
+        <li><a href="http://en.bookfi.org">Bookfi</a></li>
+        <li><a href="http://www.gutenberg.org">Project Gutenberg</a></li>
+        <li><a href="http://ebookee.org">Ebookee</a></li>
+        <li><a href="http://manybooks.net">ManyBooks</a></li>
+        <li><a href="http://2020ok.com">2020ok</a></li>
+        <li><a href="http://www.freebookspot.es/Default.aspx">FreeBookSpot</a></li>
+      </ul>
     </div>
+  </div>
 </div>
 </div>
 </div>
