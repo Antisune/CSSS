@@ -196,6 +196,22 @@ title: Textbook Trade
         cover: "http://jacketupload.macmillanusa.com/jackets/high_res/jpgs/9781429218153.jpg",
         condition: "Good",
         price: 90
+      },
+      {
+        title: "Psychology: Themes and Variations",
+        author: "Weiten & McCann",
+        course: "PSYC 1001 & 1002",
+        edition: "Third Canadian",
+        cover: "http://ecx.images-amazon.com/images/I/71lx6F7Ca4L.jpg",
+        price: 80
+      },
+      {
+        title: "Ethics in Practice",
+        author: "LaFollette",
+        edition: "Third",
+        course: "PHIL 1550",
+        cover: "http://www.hughlafollette.com/images/EiP3Cover.jpg",
+        price: 50
       }
     ]
 
@@ -239,7 +255,7 @@ title: Textbook Trade
 
         var edition = $("<li></li>");
         edition.append("<span>Edition:</span>");
-        edition.append(textbook.edition);
+        edition.append(textbook.edition + " Edition");
 
         var course = $("<li></li>");
         course.append("<span>Course:</span>");
@@ -252,7 +268,7 @@ title: Textbook Trade
 
         var condition = $("<li></li>");
         condition.append("<span>Condition:</span>");
-        condition.append(textbook.condition);
+        condition.append(textbook.condition || "");
 
         var price = $("<li></li>");
         price.append("<span>Price:</span>$");
