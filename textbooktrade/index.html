@@ -187,7 +187,8 @@ title: Textbook Trade
         condition: "Good",
         course: "BIOC/L 2200",
         cover: "http://www-fp.pearsonhighered.com/assets/hip/images/bigcovers/0131453068.jpg",
-        price: 20
+        price: 20,
+        sold: true
       },
       {
         title: "Quantitative Chemical Analysis (Hard Cover)",
@@ -202,6 +203,7 @@ title: Textbook Trade
         author: "Weiten & McCann",
         course: "PSYC 1001 & 1002",
         edition: "Third Canadian",
+        condition: "Good",
         cover: "http://ecx.images-amazon.com/images/I/71lx6F7Ca4L.jpg",
         price: 80
       },
@@ -210,6 +212,7 @@ title: Textbook Trade
         author: "LaFollette",
         edition: "Third",
         course: "PHIL 1550",
+        condition: "Good",
         cover: "http://www.hughlafollette.com/images/EiP3Cover.jpg",
         price: 50
       }
@@ -226,6 +229,9 @@ title: Textbook Trade
       for(var i=0;i<textbooks.length;++i) {
 
         textbook = textbooks[i];
+
+        // Don't show the textbook if it's sold
+        if(textbook.sold) { break; }
 
         // For every textbook, make a list item element
         var textbookListElement = $("<li></li>")
