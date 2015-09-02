@@ -231,70 +231,71 @@ title: Textbook Trade
         textbook = textbooks[i];
 
         // Don't show the textbook if it's sold
-        if(textbook.sold) { break; }
+        if(!textbook.sold) {
 
-        // For every textbook, make a list item element
-        var textbookListElement = $("<li></li>")
-        textbookListElement.addClass("textbook-entry");
+          // For every textbook, make a list item element
+          var textbookListElement = $("<li></li>")
+          textbookListElement.addClass("textbook-entry");
 
-        var rowDiv = $("<div></div>");
-        rowDiv.addClass("row");
+          var rowDiv = $("<div></div>");
+          rowDiv.addClass("row");
 
-        var imageColumn = $("<div></div>");
-        imageColumn.addClass("col-md-2");
+          var imageColumn = $("<div></div>");
+          imageColumn.addClass("col-md-2");
 
-        var image = $("<img>");
-        image.attr("src", textbook.cover || "https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Help_book_support_question_mark.png");
+          var image = $("<img>");
+          image.attr("src", textbook.cover || "https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Help_book_support_question_mark.png");
 
-        var deetsColumn1 = $("<div></div>");
-        deetsColumn1.addClass("col-md-5");
+          var deetsColumn1 = $("<div></div>");
+          deetsColumn1.addClass("col-md-5");
 
-        var ul1 = $("<ul></ul>");
+          var ul1 = $("<ul></ul>");
 
-        var title = $("<li></li>");
-        title.append("<span>Title:</span>");
-        title.append(textbook.title);
+          var title = $("<li></li>");
+          title.append("<span>Title:</span>");
+          title.append(textbook.title);
 
-        var author = $("<li></li>");
-        author.append("<span>Author:</span>");
-        author.append(textbook.author);
+          var author = $("<li></li>");
+          author.append("<span>Author:</span>");
+          author.append(textbook.author);
 
-        var edition = $("<li></li>");
-        edition.append("<span>Edition:</span>");
-        edition.append(textbook.edition + " Edition");
+          var edition = $("<li></li>");
+          edition.append("<span>Edition:</span>");
+          edition.append(textbook.edition + " Edition");
 
-        var course = $("<li></li>");
-        course.append("<span>Course:</span>");
-        course.append(textbook.course || "");
+          var course = $("<li></li>");
+          course.append("<span>Course:</span>");
+          course.append(textbook.course || "");
 
-        var deetsColumn2 = $("<div></div>");
-        deetsColumn2.addClass("col-md-5");
+          var deetsColumn2 = $("<div></div>");
+          deetsColumn2.addClass("col-md-5");
 
-        var ul2 = $("<ul></ul>");
+          var ul2 = $("<ul></ul>");
 
-        var condition = $("<li></li>");
-        condition.append("<span>Condition:</span>");
-        condition.append(textbook.condition || "");
+          var condition = $("<li></li>");
+          condition.append("<span>Condition:</span>");
+          condition.append(textbook.condition || "");
 
-        var price = $("<li></li>");
-        price.append("<span>Price:</span>$");
-        price.append(Math.round(textbook.price * 100) / 100);
+          var price = $("<li></li>");
+          price.append("<span>Price:</span>$");
+          price.append(Math.round(textbook.price * 100) / 100);
 
-        // Put everything together
-        imageColumn.append(image);
-        rowDiv.append(imageColumn);
-        ul1.append(title);
-        ul1.append(author);
-        ul1.append(edition);
-        if(textbook.course) { ul1.append(course); }
-        deetsColumn1.append(ul1);
-        rowDiv.append(deetsColumn1);
-        ul2.append(condition);
-        ul2.append(price);
-        deetsColumn2.append(ul2);
-        rowDiv.append(deetsColumn2);
-        textbookListElement.append(rowDiv);
-        list.append(textbookListElement);
+          // Put everything together
+          imageColumn.append(image);
+          rowDiv.append(imageColumn);
+          ul1.append(title);
+          ul1.append(author);
+          ul1.append(edition);
+          if(textbook.course) { ul1.append(course); }
+          deetsColumn1.append(ul1);
+          rowDiv.append(deetsColumn1);
+          ul2.append(condition);
+          ul2.append(price);
+          deetsColumn2.append(ul2);
+          rowDiv.append(deetsColumn2);
+          textbookListElement.append(rowDiv);
+          list.append(textbookListElement);
+        }
       }
 
     })
