@@ -85,9 +85,16 @@ title: Textbook Trade
       list-style-type: none;
     }
 
-    .textbook-entry ul li span {
+    .textbook-entry ul li span.title {
       font-weight: bold;
       margin-right: 4px;
+    }
+
+    .highlightTB {
+      font-weight: bold;
+      color: red;
+      margin-right: 0;
+      background-color: lightgray;
     }
     </style>
 
@@ -104,6 +111,7 @@ title: Textbook Trade
       </p>
     </div>
 
+    <label></label><input type="text" id="tbFilter" placeholder="Filter Textbooks by Title, Author or Class here"></input>
     <ul class="textbook-entry-list">
     </ul>
 
@@ -257,14 +265,74 @@ title: Textbook Trade
     // World's smallest DOMReady script, courtesy of Dustin Diaz
     function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
     r(function() {
+      renderTextbooks();
+      $("#tbFilter").on("keyup", function() {
+        renderTextbooks($(this).val());
+      })
+    });
 
+    var highlight = function(word, snippet) {
+      //alert("Highlight is being called");
+      var index = word.toLowerCase().indexOf(snippet.toLowerCase());
+      if (!word || !snippet || index == -1) {
+        //alert("Returning the word");
+        return word;
+      }
+      else {
+        var beforeSpan = word.substr(0, index);
+        var afterSpan = word.substr(index + snippet.length, word.length - 1);
+        return beforeSpan + "<span class=\"highlightTB\">" + snippet + "</span>" + afterSpan;
+      }
+    }
+
+    Object.prototype.clone = function() {
+      var newObj = (this instanceof Array) ? [] : {};
+      for (var i in this) {
+        if (i == 'clone') continue;
+        if (this[i] && typeof this[i] == "object") {
+          newObj[i] = this[i].clone();
+        } else newObj[i] = this[i]
+      } return newObj;
+    };
+
+
+    var renderTextbooks = function(filterText) {
       // Get a handle on the list tag
       var list = $("ul.textbook-entry-list");
+      list.empty();
+
+      var filteredTextbooks = [];
+
+      // Filter the textbooks and add them to a list
+      if(!filterText) {
+        filteredTextbooks = textbooks.slice();
+      }
+      else {
+        filterText = filterText.trim();
+        for(var i=0;i<textbooks.length;++i) {
+          var bookToCheck = textbooks[i].clone();
+          var matched = false;
+          // Title
+          bookToCheck.title = highlight(bookToCheck.title.slice(), filterText);
+          if(bookToCheck.title != textbooks[i].title) { matched = true; }
+          // Author
+          bookToCheck.author = highlight(bookToCheck.author.slice(), filterText);
+          if(bookToCheck.author != textbooks[i].author) { matched = true; }
+          // Course
+          if(bookToCheck.course) {
+            bookToCheck.course = highlight(bookToCheck.course.slice(), filterText);
+            if(bookToCheck.course != textbooks[i].course) { matched = true; }
+          }
+          if(matched) {
+            filteredTextbooks.push(bookToCheck);
+          }
+        }
+      }
 
       // Loop through the textbooks
-      for(var i=0;i<textbooks.length;++i) {
+      for(var i=0;i<filteredTextbooks.length;++i) {
 
-        textbook = textbooks[i];
+        textbook = filteredTextbooks[i];
 
         // Don't show the textbook if it's sold
         if(!textbook.sold) {
@@ -288,19 +356,19 @@ title: Textbook Trade
           var ul1 = $("<ul></ul>");
 
           var title = $("<li></li>");
-          title.append("<span>Title:</span>");
+          title.append("<span class=\"title\">Title:</span>");
           title.append(textbook.title);
 
           var author = $("<li></li>");
-          author.append("<span>Author:</span>");
+          author.append("<span class=\"title\">Author:</span>");
           author.append(textbook.author);
 
           var edition = $("<li></li>");
-          edition.append("<span>Edition:</span>");
+          edition.append("<span class=\"title\">Edition:</span>");
           edition.append(textbook.edition + " Edition");
 
           var course = $("<li></li>");
-          course.append("<span>Course:</span>");
+          course.append("<span class=\"title\">Course:</span>");
           course.append(textbook.course || "");
 
           var deetsColumn2 = $("<div></div>");
@@ -309,11 +377,11 @@ title: Textbook Trade
           var ul2 = $("<ul></ul>");
 
           var condition = $("<li></li>");
-          condition.append("<span>Condition:</span>");
+          condition.append("<span class=\"title\">Condition:</span>");
           condition.append(textbook.condition || "");
 
           var price = $("<li></li>");
-          price.append("<span>Price:</span>$");
+          price.append("<span class=\"title\">Price:</span>$");
           price.append(Math.round(textbook.price * 100) / 100);
 
           // Put everything together
@@ -334,7 +402,7 @@ title: Textbook Trade
         }
       }
 
-    })
+    };
 
     </script>
 
