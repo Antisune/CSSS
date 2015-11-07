@@ -1,5 +1,5 @@
 name: CSSS
-author: Martin Gingras
+author: Abe Fehr
 markdown: redcarpet
 permalink: /:categories/:title
 url: csss.herokuapp.com
