@@ -3089,6 +3089,10 @@ Footer
   color: #c9c9c9;
 }
 
+.footer-content > p > span {
+  font-weight: bold;
+}
+
 .footer .footer-col .footer-content .footer-recent-tweets li {
   line-height: 20px;
   margin-top: 20px;
