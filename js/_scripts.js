@@ -15,7 +15,8 @@
         firstLevelArrowIcon: '<i class="icon-chevron-down"></i>',
         menuArrowIcon: '<i class="icon-caret-up icon-arrow-menu"></i>',
         subMenuArrowIcon: '<i class="icon-chevron-right icon-arrow-submenu"></i>',
-        activeLinkClass: 'activelink'
+        activeLinkClass: 'activelink',
+        neverActiveClass: 'neveractive'
     };
 
     // The actual plugin constructor
@@ -192,10 +193,10 @@
                 //linkRegex = new RegExp( escapeRegExp(link) );
                 if ($.trim(link) != '' && $that.pageName == getPageName(link)) {
                     found = true;
-                    $this.addClass($that.options['activeLinkClass']);
+                    $this.not('.' + $that.options['neverActiveClass']).addClass($that.options['activeLinkClass']);
                     /* Set selected links ( parents links ) */
                     $this.parentsUntil(el).each(function() {
-                        $(this).find('>a').addClass($that.options['activeLinkClass']);
+                        $(this).find('>a').not('.' + $that.options['neverActiveClass']).addClass($that.options['activeLinkClass']);
                     });
                 }
 

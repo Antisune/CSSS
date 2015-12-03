@@ -3407,6 +3407,9 @@ Navigation
 .navigation > li > .activelink {
   color: #279fbb;
 }
+.navigation > li > .neveractive {
+  color: #000;
+}
 
 .navigation > li > a > span.label-nav {
   float: left;
