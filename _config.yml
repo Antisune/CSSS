@@ -1,6 +1,5 @@
 name: CSSS
 author: Abe Fehr
-markdown: redcarpet
 permalink: /:categories/:title
 url: csss.herokuapp.com
 port: 5050
