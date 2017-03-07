@@ -1,7 +1,7 @@
 ---
-name:  Ben Hansson
+name:  Julia Marin
 categories: councillor
-dept: Physics
+dept: First Year Rep
 img: placeholder.jpg
 blurb:
 ---

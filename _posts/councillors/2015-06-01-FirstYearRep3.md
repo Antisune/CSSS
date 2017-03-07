@@ -1,7 +1,7 @@
 ---
-name:  Ben Hansson
+name: Irina Fedchenko
 categories: councillor
-dept: Physics
+dept: First Year Rep
 img: placeholder.jpg
 blurb:
 ---

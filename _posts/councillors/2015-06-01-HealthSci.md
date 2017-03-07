@@ -1,7 +1,7 @@
 ---
-name: Sabreen El Awad
+name: Millie Close Devries
 categories: councillor
-dept: Neuroscience
+dept: Health Sciences
 img: placeholder.jpg
 blurb: 
 ---
