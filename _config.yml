@@ -4,7 +4,7 @@ permalink: /:categories/:title
 url: csss.herokuapp.com
 port: 5050
 safe: true
-pygments: true
+highlighter: rouge
 future: false
 threeArray: [3,6,9,12, 15, 18, 21]
 fourArray: [4,8,12,16,20,24,28,32]
